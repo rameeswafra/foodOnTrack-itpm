@@ -1,0 +1,60 @@
+.main {
+  min-height: 103vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../../foodontrack.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.title {
+  font-size: 100px;
+  color: white;
+ text-align: center;
+  margin-right: 200px;
+}
+.subtitle {
+  font-size: 35px;
+  padding-top: 20px;
+  color: white;
+  font-weight: bold;
+margin-right: 12%;
+
+  font-style: italic;
+}
+.intro-text {
+  width: 100%;
+  text-align: center;
+}
+
+.buttonContainer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 90px;
+}
+
+.landingbutton {
+  width: 200px;
+  height: 55px;
+  background-color: #2f3e48;
+}
+
+@media only screen and (min-width: 1200px) {
+  .buttonContainer {
+    padding: 0 200px;
+  }
+  .title {
+    padding: 0 100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 60px;
+  }
+  .landingbutton {
+    width: 150px;
+    height: 50px;
+  }
+}
