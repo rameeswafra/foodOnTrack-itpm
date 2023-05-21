@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//Add schema
 const Schema = mongoose.Schema;
 
 const deliverySchema = new Schema({

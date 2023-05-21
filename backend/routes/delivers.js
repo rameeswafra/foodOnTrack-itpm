@@ -1,5 +1,5 @@
 const router = require("express").Router();
-let Delivery = require("../models/Delivery");
+let Delivery = require("./models/Delivery");
 
 // add post detail
 
