@@ -8,7 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 const deliveryList = ["choose...","Pending", "Delivered", "Arrived at destination", "Out for delivery", "Ready to pickup","unsuccessfull delivery attempt"]
 export const EditDelivery = ({ }) => {
 
-
+//edit delivery 
    const [date, setDate] = useState(new Date().toISOString())
   const [driverName, setDriverName] = useState("")
   const [vehicleNumber, setVehicleNumber] = useState("")
@@ -67,7 +67,8 @@ export const EditDelivery = ({ }) => {
        
 
   <div className="form-group">
-        
+       
+
         <label>DriverName: </label>
         <input
           type="string"
@@ -145,8 +146,7 @@ export const EditDelivery = ({ }) => {
 
 
 
-      
-
+  
         
         <br />
         <div className="form-group">
