@@ -8,6 +8,8 @@ import {useSelector,useDispatch} from 'react-redux';
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
 import { logout } from "../actions/userAction";
+
+import './ViewShedule';
 import {
     Container,
     Form,
@@ -81,6 +83,12 @@ function HomeNavBar () {
                   <Nav.Link href="/customer-home">
                           Home     
                 </Nav.Link>
+                
+                <Nav.Link href="/myorders">My Orders</Nav.Link>
+  
+                    <Nav.Link href="/view-shedule">
+                           Shedule   
+                         </Nav.Link>
 
                 <Nav.Link>
                   <Link to='/contact' className='homenav-links'>

@@ -1,12 +1,12 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 
-function EmployeeHeader() {
+function SheduleHeader() {
 
     return(
       <nav class="navbar navbar-dark bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">EMPLOYEE MANAGEMENT   </a>
+          <a className="navbar-brand" href="#">Sri Lanka Train Shedule </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -16,10 +16,10 @@ function EmployeeHeader() {
                 <Link to="/admin-home" className="nav-link">Home</Link>
               </li>
               <li className="nav-item">
-             <Link to="/View-employee" className="nav-link">View Employee</Link>
+             <Link to="/View-shedule" className="nav-link">View Shedule</Link>
               </li>
               <li className="nav-item">
-                <Link to="/add-employee" className="nav-link">Add Employee</Link> 
+                <Link to="/add-shedule" className="nav-link">Add Shedule</Link> 
               </li>
           
             </ul>
@@ -30,4 +30,4 @@ function EmployeeHeader() {
     )
 }
 
-export default EmployeeHeader;
+export default SheduleHeader;

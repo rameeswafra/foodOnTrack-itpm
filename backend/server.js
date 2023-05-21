@@ -8,7 +8,7 @@ const connectDB = require("./config/db");
 const userRoutes =require('./routes/userRoutes');
 const orderRoutes = require("./routes/orderRoutes");
 const productRouter = require("./routes/products.js");
-const employeeRouter = require("./routes/employees.js");
+const sheduleRouter = require("./routes/shedules.js");
 const orderRouter = require("./routes/orders.js");
 const paymentRouter = require("./routes/payments.js");
 const deliveryRouter=require('./routes/delivers.js');
@@ -31,7 +31,7 @@ app.use('/api/users',userRoutes);
 app.use('/api/orders',orderRoutes);
 
 app.use('/product',productRouter);
-app.use("/employee",employeeRouter);
+app.use("/shedule",sheduleRouter);
 app.use("/order",orderRouter);
 app.use("/payment",paymentRouter);
 app.use("/delivery",deliveryRouter);

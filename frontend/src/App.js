@@ -20,8 +20,8 @@ import Gem from './components/Gem';
 import Cart from './components/Cart';
 import AdminHome from './components/AdminHome';
 
-import AddEmployee from './components/AddEmployee';
-import ViewEmployees from './components/ViewEmployee';
+import AddShedule from './components/AddShedule';
+import ViewShedule from './components/ViewShedule';
 import Salary from './components/Salary';
 
 import {ToastContainer } from 'react-toastify';
@@ -73,8 +73,8 @@ import OrderManagement from './components/OrderManagement';
             <Route path="/cart" element={<Cart/>} />
             <Route path="/add" element={<AddProduct/>} />
 
-            <Route path="/add-employee" exact element={<AddEmployee/>} />
-            <Route path="/View-employee" exact element={<ViewEmployees/>} />
+            <Route path="/add-shedule" exact element={<AddShedule/>} />
+            <Route path="/view-shedule" exact element={<ViewShedule/>} />
             <Route path="/salary" exact element={<Salary/>} />
 
             <Route exact path ="/order-home" element = {<OrderHome/>}/>

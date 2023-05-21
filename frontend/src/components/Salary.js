@@ -1,11 +1,11 @@
 import React from "react"
-import EmployeeHeader from "./EmployeeHeader";
+import SheduleHeader from "./SheduleHeader";
 
 const Salary = ({employee , handleEditClick, handleDeleteClick}) => {
 
 return(
   <>
-      <EmployeeHeader/>
+      <SheduleHeader/>
       <table class="table">
   <thead>
     <tr>
