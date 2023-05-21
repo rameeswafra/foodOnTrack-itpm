@@ -24,9 +24,9 @@ function AdminCards() {
                 
                 <CardItem
                     src="images/employee.jpg"
-                    text="Maintain Employee Details"
-                    label="Employee Management"
-                    path="/add-employee"
+                    text="Maintain Train Shedule Details"
+                    label="Train Shedule Management"
+                    path="/add-shedule"
                 />
                 
             </ul>

@@ -1,47 +1,46 @@
 import React, {useState,useEffect,Fragment,useRef} from 'react';
 import axios from 'axios';
-import EmployeeHeader from './EmployeeHeader';
-import ViewEmployeeTable from './ViewEmployeeTable';
-import EditEmployee from './EditEmployee';
+import SheduleHeader from './SheduleHeader';
+import ViewSheduleTable from './ViewSheduleTable';
+import EditShedule from './EditShedule';
 import { useReactToPrint } from "react-to-print";
 import {FiPrinter} from 'react-icons/fi';
 
-export default function ViewEmployees(){
+export default function ViewShedule(){
 
     const componentRef = useRef();
     const handlePrint = useReactToPrint({
         content: () => componentRef.current,
     });
 
-    const [employees,setEmployees] = useState([]);
+    const [shedules,setShedules] = useState([]);
     const [q, setQ] = useState("");
 
     useEffect(() =>{
 
-        function getEmployees() {
-            axios.get("http://localhost:5000/employee/view").then((res) => {
+        function getShedules() {
+            axios.get("http://localhost:5000/shedule/view").then((res) => {
 
-                setEmployees(res.data);
+            setShedules(res.data);
             }).catch((err) => {
 
                 alert(err.message);
             })
         }
 
-        getEmployees();
+        getShedules();
 
     }, [])
 
     const [editFormData, setEditFormData] = useState({
-          name:"",
-          gender:"",
-          address:"",
-          birthday:"",
-          department:"",
-          email:"",
-          phonenumber:"",
-          emergencyname:"",
-          emergencynumber:"",
+        trainName:"",
+        startFrom:"",
+        departure:"",
+        destination:"",
+        arival:"",
+        frequency:"",
+        status:"",
+          
     })
 
 
@@ -61,17 +60,17 @@ export default function ViewEmployees(){
     function updateData(e){
         e.preventDefault();
         
-        const updateEmployee ={
-            id: editEmployee,
-            address: editFormData.address,
+        const updateShedule ={
+            id: editShedule,
+            destination: editFormData.destination,
             department: editFormData.department,
-            phonenumber: editFormData.phonenumber,
-            emergencynumber: editFormData.emergencynumber,
+            arival: editFormData.arival,
+            status: editFormData.status,
             
         }
 
-        axios.put("http://localhost:5000/employee/update/:id",updateEmployee).then(() =>{
-            alert("Employee updated");
+        axios.put("http://localhost:5000/shedule/update/:id",updateShedule).then(() =>{
+            alert("Shedule updated");
             window.location.reload();
         }).catch((err) =>{
             alert(err)
@@ -81,35 +80,34 @@ export default function ViewEmployees(){
     }
 
 
-    const [editEmployee,setEditEmployee] = useState(null);
+    const [editShedule,setEditShedule] = useState(null);
 
-    const handleEditClick = (e, employee)=> {
+    const handleEditClick = (e, shedule)=> {
         e.preventDefault();
-        setEditEmployee(employee._id)
+        setEditShedule(shedule._id)
 
         const formValues = {
-          name:employee.name,
-          gender:employee.gender,
-          address:employee.address,
-          birthday:employee.birthday,
-          department:employee.department,
-          email:employee.email,
-          phonenumber:employee.phonenumber,
-          emergencyname:employee.emergencyname,
-          emergencynumber:employee.emergencynumber,
+          trainName:shedule.trainName,
+          startFrom:shedule.startFrom,
+          departure:shedule.departure,
+          destination:shedule.destination,
+          arival:shedule.arival,
+          frequency:shedule.frequency,
+          status:shedule.status,
+          
         }
 
         setEditFormData(formValues);
     }
 
     const handleCancelClick = () => {
-        setEditEmployee(null);
+        setEditShedule(null);
     }
 
 
    const handleDeleteClick = (id) => {
        
-    axios.delete('http://localhost:5000/employee/delete/'+id).then(() =>{
+    axios.delete('http://localhost:5000/shedule/delete/'+id).then(() =>{
         window.location.reload();
     }).catch((err) =>{
         alert(err)
@@ -121,9 +119,9 @@ export default function ViewEmployees(){
 //crerate contribution and add the values in that 
     return(
         <>
-            <EmployeeHeader/>
+            <SheduleHeader/>
             <div className="container">
-           
+            
         
            <input type="text" placeholder="Search..." value={q} onChange={(e)=> setQ(e.target.value)}/>
 
@@ -132,41 +130,38 @@ export default function ViewEmployees(){
                <table className='table'>
                    <thead>
                        <tr>
-                             <th>ID</th>
-                             <th>Name</th>
-                             <th>Gender</th>
-                             <th>Address</th>
-                             <th>Birthday</th>
-                             <th>Department</th>
-                             <th>Email</th>
-                             <th>Contact Number</th>
-                             <th>Emergency Name</th>
-                             <th>Emergency Number</th>
-                             <th>Salary</th>
-                             <th>Allowance</th>
+                             <th>Train No</th>
+                             <th>Train Name</th>
+                             <th>Start From</th>
+                             <th>Departure</th>
+                             <th>Destination</th>
+                             <th>Arrival</th>
+                             <th>Frequency</th>
+                             <th>Special Notice</th>
+                             
                              <th>Actions</th>
                        </tr>
                    </thead>
 
                    <tbody>
-                       {employees.filter((employee)=> {
+                       {shedules.filter((shedule)=> {
                            if(q == ""){
-                               return employee
-                           }else if(employee.name.toLowerCase().includes(q.toLowerCase())) {
-                               return employee
+                               return shedule
+                           }else if(shedule.trainName.toLowerCase().includes(q.toLowerCase())) {
+                               return shedule
                            }
-                       }).map((employee)=> (
+                       }).map((shedule)=> (
                            <Fragment>
 
-                               {editEmployee === employee._id ? (
-                                   <EditEmployee 
+                               {editShedule === shedule._id ? (
+                                   <EditShedule 
                                        editFormData={editFormData} 
                                        handleEditFormChange={handleEditFormChange}
                                        handleCancelClick={handleCancelClick}
                                    />
                                 ) : (
-                                   <ViewEmployeeTable 
-                                       employee={employee}
+                                   <ViewSheduleTable 
+                                       shedule={shedule}
                                        handleEditClick={handleEditClick}
                                        handleDeleteClick={handleDeleteClick}
                                    />
