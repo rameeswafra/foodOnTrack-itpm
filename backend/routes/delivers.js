@@ -1,6 +1,7 @@
 const router = require("express").Router();
 let Delivery = require("../models/Delivery");
 
+// add post detail
 
 router.route("/add").post((req, res) => {
 
@@ -47,7 +48,7 @@ router.route("/view").get((req, res) => {
     })
 })
 
-
+// update details
 router.put('/update/:id', (req, res) => {
     Delivery.findByIdAndUpdate(
         req.params.id,
@@ -65,6 +66,7 @@ router.put('/update/:id', (req, res) => {
     );
 });
 
+//delete details
 router.delete('/delete/:id', (req, res) => {
     Delivery.findByIdAndRemove(req.params.id).exec((err, deletedDelivery) => {
 
