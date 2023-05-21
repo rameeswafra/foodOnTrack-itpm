@@ -1,10 +1,11 @@
 const router = require("express").Router();
 let Delivery = require("./models/Delivery");
 
-// add post detail
+// deliver routes
 
 router.route("/add").post((req, res) => {
 
+    
 
     const deliverID = req.body.OID;
     const cusName = req.body.cusName;

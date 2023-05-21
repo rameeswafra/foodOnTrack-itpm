@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 //Add schema
+//import mongoose package
 const Schema = mongoose.Schema;
 
 const deliverySchema = new Schema({
@@ -42,7 +43,8 @@ const deliverySchema = new Schema({
 
     
 })
-
+//move the details in scheema to data base
 const Delivery = mongoose.model("Delivery",deliverySchema);
 
+ // use you logic to generate the _id
 module.exports = Delivery;
