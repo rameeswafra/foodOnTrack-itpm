@@ -15,6 +15,10 @@ const deliverySchema = new Schema({
         type : String,
         required : true
     },
+    vehicleType :{
+            type :String,
+            required : true
+    },
     nic : {
         type : String,
         required : true

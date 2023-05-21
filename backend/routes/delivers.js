@@ -1,11 +1,11 @@
 const router = require("express").Router();
 let Delivery = require("./models/Delivery");
 
-// deliver routes
+// deliver routes details
 
 router.route("/add").post((req, res) => {
 
-    
+
 
     const deliverID = req.body.OID;
     const cusName = req.body.cusName;
@@ -13,6 +13,7 @@ router.route("/add").post((req, res) => {
     const date = req.body.date;
     const driverName = req.body.driverName;
     const vehicleNumber = req.body.vehicleNumber;
+    const vehicleType =req.body.vehicleType;
     const nic = req.body.nic;
     const contactNumber = req.body.contactNumber;
     const deliveryStatus = req.body.deliveryStatus;
@@ -27,6 +28,7 @@ router.route("/add").post((req, res) => {
         driverName,
         nic,
         contactNumber,
+        vehicleType,
         deliveryStatus,
         vehicleNumber
     })
@@ -83,6 +85,6 @@ router.delete('/delete/:id', (req, res) => {
 });
 
 
-
+//add router details
 
 module.exports = router;
