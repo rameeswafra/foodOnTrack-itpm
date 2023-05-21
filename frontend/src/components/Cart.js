@@ -184,7 +184,7 @@ const Cart = () => {
             'en-US',
             {
                 style: 'currency',
-                currency: 'USD',
+                currency: 'LKR',
             }
         )}
         </td>
@@ -220,7 +220,7 @@ const Cart = () => {
                             <h2>Cart Summary</h2>
                             <p className="font-weight-light text-muted border-bottom">{cart.length === 1 ? '(1) Item' : `(${length}) Items`}</p>
 
-                            <p className="font-weight-bold">Total: ${total}</p>
+                            <p className="font-weight-bold">Total: Rs {total}</p>
 
                             <button 
                                     onClick={reduceQty}

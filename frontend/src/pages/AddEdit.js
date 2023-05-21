@@ -169,7 +169,7 @@ export default function AddEdit(){
                                     'en-US',
                                     {
                                     style: 'currency',
-                                    currency: 'USD',
+                                    currency: 'LKR',
                                     }
                                     )}
                                     </td>
@@ -224,7 +224,7 @@ export default function AddEdit(){
                         </select>
                     </div>
                     <br></br>
-                    <div className="total">Total: ${total}.00</div>
+                    <div className="total">Total: Rs {total}.00</div>
 
                    <br></br>
                    
