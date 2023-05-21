@@ -57,7 +57,7 @@ export default function Edit (){
 
 
 <div className="form-group">
-    <label>Address: </label>
+    <label>Name: </label>
     <input
       type="text"
       required
@@ -79,7 +79,7 @@ export default function Edit (){
     />
   </div>
   <br/>
-
+  
   
   <div className="form-group">
   

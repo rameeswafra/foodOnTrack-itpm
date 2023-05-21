@@ -48,9 +48,9 @@ router.post('/add', upload, async(req,res)=>{
     
         // If length of number string is less than 5 then add leading 0s in nuberToString
     
-        if(numberToString.length < 5){
+        if(numberToString.length < 25){
     
-            for (let i = numberToString.length; i < 5; i++){
+            for (let i = numberToString.length; i < 25; i++){
     
                 numberToString = '0' + numberToString
     
@@ -96,6 +96,7 @@ router.route("/update/:ID").put(async(req,res)=>{
         category,
         price,
         quantity,
+        productId
     }
 
     const update = await Product.findByIdAndUpdate(productId, Update).then(()=>{

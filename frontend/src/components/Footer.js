@@ -12,10 +12,10 @@ function Footer() {
     <div className="footer-container">
       <section className="footer-subscription">
         <p className="footer-subscription-heading">
-          Join with us to receive our best products
+          Join with us to receive your food on your seat
         </p>
         <p className="footer-subscription-text">
-          Sri Lanka's best online product store
+          Sri Lanka's first railway food delivering partner
         </p>
       </section>
       <div class="footer-links">
@@ -46,7 +46,7 @@ function Footer() {
           <div class="social-icons">
             <a
               class="social-icon-link facebook"
-              href="https://www.facebook.com/profile.php?id=100081568363121"
+              href="https://www.facebook.com/profile.php?id=1081568363121"
               target="_blank"
               aria-label="Facebook"
             >
@@ -54,7 +54,7 @@ function Footer() {
             </a>
             <a
               class="social-icon-link instagram"
-              href="https://www.instagram.com/verveemarket/"
+              href="https://www.instagram.com/foodontrack/"
               target="_blank"
               aria-label="Instagram"
             >
@@ -70,7 +70,7 @@ function Footer() {
             </a>
             <a
               class="social-icon-link twitter"
-              href="https://twitter.com/Verve56028753"
+              href="https://twitter.com/foodontrack56028753"
               target="_blank"
               aria-label="Twitter"
             >

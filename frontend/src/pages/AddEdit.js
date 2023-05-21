@@ -169,7 +169,7 @@ export default function AddEdit(){
                                     'en-US',
                                     {
                                     style: 'currency',
-                                    currency: 'USD',
+                                    currency: 'LKR',
                                     }
                                     )}
                                     </td>
@@ -190,8 +190,8 @@ export default function AddEdit(){
                 
 
                     <div className="col-md-7 element">
-                        <label for="inserProduct" className="form-label">Address</label>
-                        <input type="text" name="address" className="form-control" id="inserProduct" placeholder="Enter address" required
+                        <label for="inserProduct" className="form-label">Name</label>
+                        <input type="text" name="address" className="form-control" id="inserProduct" placeholder="Enter your name here" required
                           onChange={(e) =>{setAddress(e.target.value)}}  />
                     </div>
 
@@ -208,28 +208,28 @@ export default function AddEdit(){
                     <br/>
 
                     <div className="col-md-7 element">
-                        <label className="form-label" for="categorySelect">Shipping Area</label>
+                        <label className="form-label" for="categorySelect">Delivering Station</label>
                         <select name="area" className="form-select" id="categorySelect"
                            onChange={(e) =>{setArea(e.target.value)}}   >
-                            <option>Choose Shipping Area...</option>
-                            <option>India</option>
-                            <option>Maldives</option>
-                            <option>Singapore</option>
-                            <option>Thailand</option>
-                            <option>Dubai</option>
-                            <option>Portugal</option>
-                            <option>Italy</option>
-                            <option>United Kingdom</option>
-                            <option>China</option>
+                            <option>Choose Food Delivering Station...</option>
+                            <option>Jaffna</option>
+                            <option>Killinochi</option>
+                            <option>Vavuniya</option>
+                            <option>Medeawachiya</option>
+                            <option>Anurathapura</option>
+                            <option>Puttalam</option>
+                            <option>Chilaw</option>
+                            <option>Negombo</option>
+                            <option>Port</option>
                         </select>
                     </div>
                     <br></br>
-                    <div className="total">Total: ${total}.00</div>
+                    <div className="total">Total: LKR{total}.00</div>
 
                    <br></br>
                    
 
-                    <button type="submit" position = "center"className="btn btn-primary Addbtn">Add Order</button>
+                    <button type="submit" position = "center"className="btn btn-primary Addbtn">Place Order</button>
 
                 </form>
             </div>

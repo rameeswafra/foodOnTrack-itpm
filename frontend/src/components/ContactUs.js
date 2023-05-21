@@ -14,21 +14,21 @@ const ContactUs = () => {
                         <div class="address details">
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="topic">Address</div>
-                            <div class="text-one">No 24 Galle Road</div>
-                            <div class="text-two">Colombo 02</div>
+                            <div class="text-one">No 4s4 Galle Road</div>
+                            <div class="text-two">Colombo 12</div>
                             <div class="text-two">Sri Lanka</div>
                         </div>
                         <div class="phone details">
                             <i class="fas fa-phone-alt"></i>
                             <div class="topic">Phone</div>
-                            <div class="text-one">+0094 9893 5647</div>
-                            <div class="text-two">+0094 3434 5678</div>
+                            <div class="text-one">+0094 1234 5647</div>
+                            <div class="text-two">+0094 1234 5678</div>
                         </div>
                         <div class="email details">
                             <i class="fas fa-envelope"></i>
                             <div class="topic">Email</div>
-                            <div class="text-one">verveemarket@gmail.com</div>
-                            <div class="text-two">info.verve@gmail.com</div>
+                            <div class="text-one">foodontrack@gmail.com</div>
+                            <div class="text-two">info.foodontrack@gmail.com</div>
                         </div>
                         </div>
                         <div class="right-side">

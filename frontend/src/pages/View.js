@@ -79,10 +79,11 @@ export const View = () => {
               return(
                 <tr key={item._id}>
                 <div className='row'>OrderID: {item.orderID}</div><br/>
-                <div className='row'>Customer: {userInfo?.name}</div><br/>
-                <div className='row'>Address: {item.address}</div><br/>
+                {/* <div className='row'>Customer: {userInfo?.name}</div><br/> */}
+                <div className='row'>Name: {item.address}</div><br/>
                 <div className='row'>Phone: {item.contactNO}</div><br/>
-                <div className='row'>Date: {date}</div>
+                <div className='row'>Date: {date}</div><br/>
+                <div className='row'>Food Delivering Station: {item.area}</div>
                 
                 <div><td className='button'><button className = "btn btncolor" onClick={() => { navigate(`/edit/${item._id}`, { state: { ...item } }) }}>EDIT</button></td>
                 <td className='button'><button className = "btn btncolor" onClick={() => { const confirmBox = window.confirm(

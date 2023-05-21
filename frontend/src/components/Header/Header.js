@@ -53,7 +53,7 @@ const Header = ({ history ,setSearch}) => {
       <Container>
         <Navbar.Brand>
         <Link to='/customer-home' className='homenavbar-logo'>
-                VERVE <AiOutlineDingding/>
+                Food On Track <AiOutlineDingding/>
         </Link>
         </Navbar.Brand>
 

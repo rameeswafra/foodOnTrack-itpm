@@ -7,7 +7,7 @@ const About  = () => {
 
                 <div style={{marginTop:"150px"}}>
             <h2> {""}
-            This Is Verve Order Management System
+            This Is Railway Food Delivery System
             </h2>
         </div>
         </>

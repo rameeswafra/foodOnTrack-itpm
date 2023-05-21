@@ -87,8 +87,8 @@ function HomeNavBar () {
                           Contact Us
                   </Link>
                 </Nav.Link>
-  
-                <Nav.Link href="/cart">
+                
+                          <Nav.Link href="/cart">
                   
                                   <FaShoppingCart/> Cart <span className='circle' style={{position: 'absolute', top: '15px'}}>{length}</span>
                   
@@ -127,8 +127,8 @@ function HomeNavBar () {
                           Contact Us
                   </Link>
                 </Nav.Link>
+               
   
-                
               </Nav>
               
             
