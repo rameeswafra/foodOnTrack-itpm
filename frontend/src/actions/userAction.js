@@ -15,7 +15,6 @@ import {
 } from "../constants/userConstants";
 import axios from "axios";
 
-
 const token = localStorage.getItem("token");
 
 export const login = (email, password) => async (dispatch) => {
@@ -29,22 +28,24 @@ export const login = (email, password) => async (dispatch) => {
       },
     };
 
-    const { data } = await axios.post( "/api/users/login", { email, password },config);
+    const { data } = await axios.post(
+      "/api/users/login",
+      { email, password },
+      config
+    );
 
     dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
 
-//call the user info
+    //call the user info
     localStorage.setItem("userInfo", JSON.stringify(data));
 
-    if(email == "verveadmin@gmail.com"){
+    if (email == "foodadmin@gmail.com") {
       alert("login successfull");
-      window.location.href = '/admin-home';
-    }else{
+      window.location.href = "/admin-home";
+    } else {
       alert("login successfull");
-      window.location.href = '/customer-home';
+      window.location.href = "/customer-home";
     }
-    
-
   } catch (error) {
     dispatch({
       type: USER_LOGIN_FAIL,
@@ -56,49 +57,46 @@ export const login = (email, password) => async (dispatch) => {
   }
 };
 
-
-//clear the localstorage 
+//clear the localstorage
 
 export const logout = () => async (dispatch) => {
   localStorage.removeItem("userInfo");
-   window.location.href = "/";
+  window.location.href = "/";
   dispatch({ type: USER_LOGOUT });
 };
 
+export const register =
+  (name, email, password, phone, pic) => async (dispatch) => {
+    try {
+      dispatch({ type: USER_REGISTER_REQUEST });
 
-export const register = (name, email, password, phone,pic) => async (dispatch) => {
-  try {
-    dispatch({ type: USER_REGISTER_REQUEST });
+      const config = {
+        headers: {
+          "Content-type": "application/json",
+        },
+      };
 
-    const config = {
-      headers: {
-        "Content-type": "application/json",
-      },
-    };
+      const { data } = await axios.post(
+        "/api/users",
+        { name, email, password, phone, pic },
+        config
+      );
 
-    const { data } = await axios.post(
-      "/api/users",
-      { name, email, password, phone,pic },config
-    );
+      dispatch({ type: USER_REGISTER_SUCCESS, payload: data });
 
-    dispatch({ type: USER_REGISTER_SUCCESS, payload: data });
+      dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
 
-    dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
-
-    localStorage.setItem("userInfo", JSON.stringify(data));
-
-     
-  } catch (error) {
-    dispatch({
-      type: USER_REGISTER_FAIL,
-      payload:
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message,
-    });
-  }
-};
-
+      localStorage.setItem("userInfo", JSON.stringify(data));
+    } catch (error) {
+      dispatch({
+        type: USER_REGISTER_FAIL,
+        payload:
+          error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
+      });
+    }
+  };
 
 export const updateProfile = (user) => async (dispatch, getState) => {
   try {
@@ -134,7 +132,6 @@ export const updateProfile = (user) => async (dispatch, getState) => {
   }
 };
 
-
 export const deleteProfile = (_id) => async (dispatch, getState) => {
   try {
     dispatch({
@@ -151,7 +148,7 @@ export const deleteProfile = (_id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.delete('/api/users/'+_id, config);
+    const { data } = await axios.delete("/api/users/" + _id, config);
 
     dispatch({
       type: USER_DELETE_SUCCESS,
