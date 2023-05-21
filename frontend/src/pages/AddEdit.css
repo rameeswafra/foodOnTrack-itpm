@@ -2,7 +2,8 @@
 .form{
   margin-left:25%;
   margin-right:25%;
-  background-color:#C45AEC;
+  background-color: rgba(56, 125, 255, 0.17);
+  /* background-image: url("banner.jpg"); */
   border-radius:4px;
 }
 

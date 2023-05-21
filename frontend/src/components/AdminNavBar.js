@@ -43,7 +43,7 @@ function AdminNavBar () {
         <Container>
           <Navbar.Brand>
           <Link to='/admin-home' className='homenavbar-logo'>
-                  VERVE <AiOutlineDingding/>
+                Food On Track <AiOutlineDingding/>
           </Link>
           </Navbar.Brand>
   

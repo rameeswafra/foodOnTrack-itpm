@@ -2,14 +2,14 @@
   min-height: 103vh;
   display: flex;
   align-items: center;
-  background-image: url("../../foodontrack.png");
+  background-image: url("../../train.png");
   background-position: center;
   background-size: cover;
 }
 
 .title {
   font-size: 100px;
-  color: white;
+  color: rgb(255, 255, 255);
  text-align: center;
   margin-right: 200px;
 }

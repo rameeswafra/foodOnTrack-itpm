@@ -1,12 +1,12 @@
 {
-  "name": "verve",
+  "name": "foodontrack",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "start": "nodemon backend/server.js"
   },
-  "author": "Rishad",
+  "author": "Sriram",
   "license": "ISC",
   "dependencies": {
     "alert": "^5.0.10",
